@@ -1,0 +1,120 @@
+\documentclass[12pt,A4]{article} 
+    
+% formato da página
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+    
+%% Escrevendo em português
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+%\usepackage{times} 
+\usepackage{graphicx}
+
+% Definindo espaçamentos
+\setlength{\parindent}{0pc}
+\setlength{\parskip}{0pt}
+\linespread{1.5} 
+
+\newcommand{\sepitem}{\vspace{0.1in}\item} 
+\newcommand{\titulo}{\item \textbf}
+\begin {document}
+\small{
+    \title{
+        \vspace{-2cm}
+        {\small MAC5786 - Princípios de IHC \hfill DCC/IME/USP}
+    \vspace{0.1in}\\
+        Como escrever a monografia de MAC5785\\
+        {\small coloque o seu título na forma de uma pergunta}
+}
+\vspace{-0.6in} 
+    \author{Seu Nome  \{\textit{seu.email@ime.usp.br}\}
+\vspace{-0.6in} 
+}
+    \date{}
+\maketitle
+}
+\vspace {-0.3in}
+\thispagestyle{empty}
+
+% ===================================================================
+\section{Resumo}
+
+Esse esqueleto mostra o padrão que você deve utilizar para escrever a sua monografia.
+Escreva aqui um breve resumo do seu trabalho, com 10 a 15 linhas.
+O resumo deve conter uma breve descrição do tema, e do objetivo da sua
+monografia.
+Ao colocar o tema na forma de pergunta, você deixará o objetivo da monografia mais claro e, obviamente, você deve explorar as alternativas para responder a pergunta. 
+
+% ===================================================================
+\section{Introdução}
+\label{sec:Introducao}
+
+A introdução deve descrever o tema, definindo a motivação e justificando a sua importância e relevância. Apresente também os impactos que teríamos ao "responder" a pergunta proposta pelo seu tema. Possivelmente, a partir das
+introduções dos demais artigos, você possa costurar uma breve
+descrição dos problemas atuais mais relevantes, motivação, contribuições, etc.
+
+% ===================================================================
+\section{Estado da arte: discussão crítica dos artigos}
+\label{sec:Artigos}
+
+Nessa sessão você deve tentar apresentar os artigos como exemplos de
+trabalhos que tentaram responder a pergunta que você colocou. Em particular, discuta a metodologia e contribuições de cada artigo. Junte as descrições caso as metodologias sejam semelhantes. 
+
+Procure apresentar os artigos de forma organizada, por exemplo,
+dividindo-os em subseções e assim dar continuidade à leitura. 
+Figuras, como a figura~\ref{fig:Cabines}
+são também muito importantes para o 
+entendimento do texto. Porém, caso você venha a utilizar uma figura de
+um dos trabalhos que você leu, forneça os créditos devidamente no
+caption da própria figura \footnote{Embora o correto seria obter permissão de
+reprodução do próprio autor.}.
+
+\begin{figure} 
+    \begin{center}
+        \begin{tabular}{cc}
+    \includegraphics[width=0.3\textwidth]{cabine0.png} & 
+    \includegraphics[width=0.3\textwidth]{cabine1.png} \\
+    outra & linha 
+    \end{tabular}
+    \caption{Essa é uma figura composta. A imagem da cabine foi retirada de \cite{hartley:04}. }
+\end{center}
+\label{fig:Cabines}
+\end{figure} 
+
+% ===================================================================
+\subsection{Referências}
+\label{sec:Referencias}
+Quando necessário, além dos artigos que você apresentar, utilize também
+outras referências. Para isso use o comando \texttt{cite} do
+latex. Por exemplo, Bradski \cite{bradski:opencv} apresenta um manual do OpenCV e, para saber mais sobre visão e processamento de imagens você pode consultar \cite{hartley:04,gon:dip}. Preferencialmente, aprenda a usar o \href{https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management}{\textbf{bibtex}}.
+
+
+% ===================================================================
+\section{Conclusão}
+\label{sec:Discussao}
+Na última sessão, você deve resumir o estado da arte e suas limitações, 
+apresentando também os desafios que ainda restam e, se você puder, possíveis alternativas para resolver esses desafios.
+
+
+\begin{thebibliography}{10}
+\bibitem{bradski:opencv}
+G.~Bradski and A.~Kaehler.
+\newblock{Learning OpenCV: Computer Vision with the OpenCV Library}. 
+\newblock{O'Reilly}, 2008.
+\bibitem{hartley:04}
+    R.I.~Hartley and A.~Zisserman.
+    \newblock {\em Multiple View Geometry in Computer Vision: 2nd Edition}.
+    \newblock Morgan Kaufmann, 2004.
+\bibitem{gon:dip}
+    R.C.~Gonzalez and R.~E.~Woods.
+    \newblock {\em Digital Image Processing}.
+    \newblock 2nd edition, Prentice Hall, 2002.
+\end{thebibliography}
+
+\vfill
+
+%\raggedleft
+%{\sc novembro/2010}
+
+\end{document}
+
